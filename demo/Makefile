@@ -1,7 +1,7 @@
 CFLAGS = -g2 -O3 -fPIC -pthread -pipe 
 CRYPTOPP = ..
 CFLAGS += -I$(CRYPTOPP)
-LIBS = -L$(CRYPTOPP)/cryptopp  -lcryptopp -lcurses
+LIBS = -L$(CRYPTOPP)/cryptopp  -L /usr/local/lib libcryptopp.a -lcurses
 
 all:	clean demoCircle run
 
